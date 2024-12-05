@@ -115,47 +115,50 @@ export default function HomePage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="bg-gray-100 py-16 px-4 rounded-xl mx-5 md:mx-20">
-        <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <img
-            src={testImage}
-            alt="Process"
-            className="rounded-lg shadow-lg w-full h-auto"
-          />
-          <div className="space-y-6">
-            {[
-              {
-                step: "1",
-                title: "Request a Test",
-                description: "Schedule a soil test at your location",
-              },
-              {
-                step: "2",
-                title: "Sample Collection",
-                description:
-                  "Our experts will collect soil samples from your field",
-              },
-              {
-                step: "3",
-                title: "Get Results",
-                description:
-                  "Receive analysis and personalized recommendations",
-              },
-            ].map((item, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center">
-                  {item.step}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
+      <section  className="bg-gray-100 py-16 px-4 rounded-xl mx-5 md:mx-20 h-[900px] md:h-[600px]">
+  <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="flex justify-center ">
+      <img
+        src={testImage}
+        alt="Process"
+        className="rounded-lg shadow-lg w-full h-1/2 ml-20 mr-20 mt-10"
+      />
+    </div>
+    <div className="space-y-6 mt-20">
+      {[
+        {
+          step: "1",
+          title: "Request a Test",
+          description: "Schedule a soil test at your location",
+        },
+        {
+          step: "2",
+          title: "Sample Collection",
+          description:
+            "Our experts will collect soil samples from your field",
+        },
+        {
+          step: "3",
+          title: "Get Results",
+          description:
+            "Receive analysis and personalized recommendations",
+        },
+      ].map((item, index) => (
+        <div key={index} className="flex items-start gap-4">
+          <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center">
+            {item.step}
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+            <p className="text-gray-600">{item.description}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Call to Action Section */}
       <section className="text-center py-16 px-4">
