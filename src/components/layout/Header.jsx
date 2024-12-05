@@ -21,16 +21,20 @@ export default function Header() {
 
   return (
     <nav className="bg-green-600 text-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 ml-20">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link onClick={() => setCid(null)} to={'/'} className="flex items-center gap-2">
+          {/* Logo and Title */}
+          <Link
+            onClick={() => setCid(null)}
+            to="/"
+            className="flex items-center gap-2"
+          >
             <img
               src={logo}
               alt="Logo"
-              style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+              className="w-10 h-10 rounded-full"
             />
-            <span>Bhoomi Shakthi</span>
+            <span className="text-lg font-bold">Bhoomi Shakthi</span>
           </Link>
 
           {/* Hamburger Menu Icon for Mobile */}
@@ -47,11 +51,12 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map(({ to, icon: Icon, label, id }) => (
               <Link
-                style={cid === id ? { color: 'yellow' } : { color: 'white' }}
-                onClick={() => activeTab(id)}
                 key={to}
+                onClick={() => activeTab(id)}
                 to={to}
-                className="flex items-center gap-1 hover:text-green-200 transition-colors"
+                className={`flex items-center gap-1 transition-colors ${
+                  cid === id ? 'text-yellow-300' : 'text-white hover:text-green-200'
+                }`}
               >
                 <Icon className="w-4 h-4" />
                 {label}
@@ -68,7 +73,7 @@ export default function Header() {
         }`}
         style={{ width: '70%' }}
       >
-        <div className="p-6">
+        <div className="p-6 h-full overflow-y-auto">
           <button
             className="absolute top-4 right-4 text-white"
             onClick={() => setIsMenuOpen(false)}
@@ -79,13 +84,14 @@ export default function Header() {
             {navLinks.map(({ to, icon: Icon, label, id }) => (
               <li key={to}>
                 <Link
-                  style={cid === id ? { color: 'yellow' } : { color: 'white' }}
                   onClick={() => {
                     activeTab(id);
                     setIsMenuOpen(false); // Close menu after selection
                   }}
                   to={to}
-                  className="flex items-center gap-2 hover:text-green-200 transition-colors"
+                  className={`flex items-center gap-2 transition-colors ${
+                    cid === id ? 'text-yellow-300' : 'text-white hover:text-green-200'
+                  }`}
                 >
                   <Icon className="w-4 h-4" />
                   {label}
