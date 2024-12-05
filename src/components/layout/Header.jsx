@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Leaf, Home, TestTube, ShoppingBag, FileSpreadsheet, User } from 'lucide-react';
+import logo from '../../Assets/logo.jpg'
 
 const navLinks = [
   
@@ -28,7 +29,7 @@ setCid(id);
           </Link> */}
           <Link onClick={()=>setCid(null)} to={'/'} className="flex items-center gap-2">
           <img
-              src="../src/Assets/logo.jpg"
+              src={logo}
               alt="Logo"
               style={{ width: '50px', height: '50px', borderRadius: '50%' }}
             />
