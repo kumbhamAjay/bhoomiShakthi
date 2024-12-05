@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { TestTube, Sprout, ShoppingBag } from 'lucide-react';
-import aboutus from '../../Assets/aboutus1.jpg';
-import testImage from '../../Assets/testImage.jpg';
+import React from "react";
+import { Link } from "react-router-dom";
+import { TestTube, Sprout, ShoppingBag } from "lucide-react";
+import aboutus from "../../Assets/aboutus1.jpg";
+import testImage from "../../Assets/testImage.jpg";
 
 export default function HomePage() {
   return (
@@ -23,7 +23,8 @@ export default function HomePage() {
               Optimize Your Soil Health
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto">
-              Professional soil testing and expert recommendations for better crop yield
+              Professional soil testing and expert recommendations for better
+              crop yield
             </p>
             <Link
               to="/request-test"
@@ -37,7 +38,10 @@ export default function HomePage() {
       </section>
 
       {/* About Us Section */}
-      <section className="bg-gray-100 py-16 px-4 rounded-xl mx-5 md:mx-20" style={{ backgroundColor: "#95ccb2" }}>
+      <section
+        className="bg-gray-100 py-16 px-4 rounded-xl mx-5 md:mx-20"
+        style={{ backgroundColor: "#95ccb2" }}
+      >
         <h2 className="text-3xl font-bold text-center mb-8">About</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex justify-center">
@@ -49,15 +53,25 @@ export default function HomePage() {
           </div>
           <div className="space-y-6 text-center md:text-left">
             <div>
-              <h3 className="text-xl font-semibold mb-2">About Bhoomi Shakthi</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                About Bhoomi Shakthi
+              </h3>
               <p className="text-gray-800">
-                Bhoomi is dedicated to providing accurate soil testing and personalized product recommendations to enhance your agricultural practices.
+                Bhoomi is dedicated to providing accurate soil testing and
+                personalized product recommendations to enhance your
+                agricultural practices. Our user-friendly platform offers
+                comprehensive services, including soil test requests, crop
+                advisory, and detailed soil preparation information.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
               <p className="text-gray-800">
-                Bhoomi aims to support farmers in making informed decisions for optimal crop growth. Our expert advice ensures healthier harvests.
+                With a focus on sustainability and productivity, Bhoomi aims to
+                support farmers in making informed decisions for optimal crop
+                growth. Our expert advice and product recommendations ensure
+                that your soil receives the care it deserves, leading to
+                healthier and more fruitful harvests.
               </p>
             </div>
           </div>
@@ -69,11 +83,27 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            { icon: TestTube, title: "Soil Testing", description: "Comprehensive analysis of soil composition and nutrients" },
-            { icon: Sprout, title: "Expert Recommendations", description: "Personalized advice for improving soil health" },
-            { icon: ShoppingBag, title: "Quality Products", description: "Access to premium soil enhancement products" },
+            {
+              icon: TestTube,
+              title: "Soil Testing",
+              description:
+                "Comprehensive analysis of soil composition and nutrients",
+            },
+            {
+              icon: Sprout,
+              title: "Expert Recommendations",
+              description: "Personalized advice for improving soil health",
+            },
+            {
+              icon: ShoppingBag,
+              title: "Quality Products",
+              description: "Access to premium soil enhancement products",
+            },
           ].map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-lg text-center"
+            >
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <service.icon className="w-8 h-8 text-green-600" />
               </div>
@@ -88,12 +118,30 @@ export default function HomePage() {
       <section className="bg-gray-100 py-16 px-4 rounded-xl mx-5 md:mx-20">
         <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <img src={testImage} alt="Process" className="rounded-lg shadow-lg w-full h-auto" />
+          <img
+            src={testImage}
+            alt="Process"
+            className="rounded-lg shadow-lg w-full h-auto"
+          />
           <div className="space-y-6">
             {[
-              { step: "1", title: "Request a Test", description: "Schedule a soil test at your location" },
-              { step: "2", title: "Sample Collection", description: "Our experts will collect soil samples from your field" },
-              { step: "3", title: "Get Results", description: "Receive analysis and personalized recommendations" },
+              {
+                step: "1",
+                title: "Request a Test",
+                description: "Schedule a soil test at your location",
+              },
+              {
+                step: "2",
+                title: "Sample Collection",
+                description:
+                  "Our experts will collect soil samples from your field",
+              },
+              {
+                step: "3",
+                title: "Get Results",
+                description:
+                  "Receive analysis and personalized recommendations",
+              },
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center">
@@ -113,7 +161,8 @@ export default function HomePage() {
       <section className="text-center py-16 px-4">
         <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
         <p className="text-lg text-gray-600 mb-8">
-          Join thousands of farmers who trust Bhoomi Shakthi for their soil analysis needs
+          Join thousands of farmers who trust Bhoomi Shakthi for their soil
+          analysis needs
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <Link
