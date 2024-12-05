@@ -91,7 +91,7 @@ export default function LoginForm() {
             Phone Number
           </label>
           <input
-            style={{ color: "white" }}
+            style={{ color: "black",backgroundColor:"white" }}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="phone"
             type="tel"
@@ -111,7 +111,7 @@ export default function LoginForm() {
             >
               Enter OTP
             </label>
-            <input
+            <input  style={{ color: "black" }}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="otp"
               type="text"
