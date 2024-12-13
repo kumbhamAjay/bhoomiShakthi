@@ -163,7 +163,9 @@ export default function SoilTestRequest() {
   ////////////////////////
 
   async function getLocation() {
+    setFormData({...formData,location:"    Updating Location....."})
     try {
+      
       const position = await new Promise((resolve, reject) => {
         navigator.geolocation.getCurrentPosition(resolve, reject);
       });
